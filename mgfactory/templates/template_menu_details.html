@@ -1,0 +1,33 @@
+{% extends "base_app.html" %}
+{% load i18n %}
+
+{% block block-content %}
+<h1 class="title-section">{% translate "Suppliers" %}</h1>
+<div class="top-section1">
+    <div class="wrapper-search-rapid">
+        <input type="text" name="search-rapid" id="search-rapid" placeholder="Filtrer les fournisseurs">
+        <button class="button-template button-search" title="Filtrer"></button>
+        <button class="button-template button-filter" id="button-filter" title="Filtres avancés"></button>
+    </div>
+    <button class="button-template button-add button-tools">{% translate "Add" %}</button> 
+    <button class="button-template button-modify button-tools">{% translate "Edit" %}</button>
+    <button class="button-template button-save button-tools">{% translate "Save" %}</button>
+    <button class="button-template button-cancel button-tools">{% translate "Cancel" %}</button>
+    <button class="button-template button-printer button-first-right button-tools">{% translate "Print"%}</button>
+    <button class="button-template button-export button-tools">{% translate "Export" %}</button>            
+</div>
+<div class="top-section2">
+    <p class="number-items">24 résultat(s)</p>
+    <div class="wrapper-tab">
+        <ul>
+            <li><a class="tab-actif" href="#">{% translate "Identification" %}</a></li>
+            <li><a href="#">{% translate "Addresse(s)" %}</a></li>
+            <li><a href="#">{% translate "Interlocutor(s)" %}</a></li>
+            <li><a href="#">{% translate "Order(s)" context "commandes en cours du fournisseur" %}</a></li>
+        </ul>
+    </div>
+</div>
+</div>
+
+{% block block-content-details %}{% endblock %}
+{% endblock %}

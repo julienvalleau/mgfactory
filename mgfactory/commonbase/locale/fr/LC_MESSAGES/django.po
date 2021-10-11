@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-06 23:29+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: commonbase/admin.py:5 commonbase/admin.py:6
+msgid "mgFactory administration"
+msgstr "Administration de mgFactory"
+
+#. Translators: Pays
+#: commonbase/models.py:10
+msgid "France"
+msgstr ""
+
+#: commonbase/models.py:11
+msgid "Canada"
+msgstr ""
+
+#: commonbase/models.py:12
+msgid "United States"
+msgstr "États-Unis"
+
+#: commonbase/models.py:27
+msgid "Cities"
+msgstr "Villes"
+
+#: commonbase/models.py:28
+msgid "City"
+msgstr "Ville"
+
+#~ msgid "Dashboard"
+#~ msgstr "Tableau de bord"
+
+#, fuzzy
+#~| msgid "mgFactory administration"
+#~ msgid "Administration"
+#~ msgstr "Administration de mgFactory"
+
+#~ msgid "Log off"
+#~ msgstr "Se déconnecter"
+
+#~ msgid "Language"
+#~ msgstr "Langue"
+
+#~ msgid "Solution logo"
+#~ msgstr "Logo de la solution"
+
+#~ msgid "Raw materials"
+#~ msgstr "Matières premières"
+
+#~ msgid "Materials"
+#~ msgstr "Matières"
+
+#~ msgid "Suppliers"
+#~ msgstr "Fournisseurs"
+
+#~ msgctxt "Commandes de matières premières"
+#~ msgid "Orders"
+#~ msgstr "Commandes"
+
+#~ msgid "Parts"
+#~ msgstr "Pièces"
+
+#~ msgid "Parts in progress"
+#~ msgstr "Pièces en cours"
+
+#~ msgid "Groups of parts"
+#~ msgstr "Groupes de pièces"
+
+#~ msgid "Jigs"
+#~ msgstr "Gabarits"
+
+#~ msgid "Molds"
+#~ msgstr "Moules"
+
+#~ msgid "Backing molds"
+#~ msgstr "Contre-moules"
+
+#~ msgid "Purchase orders"
+#~ msgstr "Commandes clients"
+
+#~ msgid "Customers"
+#~ msgstr "Clients"
+
+#~ msgctxt "commandes clients"
+#~ msgid "Orders"
+#~ msgstr "Commandes"
+
+#~ msgid "Shipments"
+#~ msgstr "Expéditions"
+
+#~ msgid "Repurchases"
+#~ msgstr "Rachats"
+
+#~ msgid "Labor"
+#~ msgstr "Main d'oeuvre"
+
+#~ msgid "Quality"
+#~ msgstr "Qualité"
+
+#~ msgid "Quality alerts"
+#~ msgstr "Alerts qualités"
+
+#~ msgid "Your username and password didn't match. Please try again."
+#~ msgstr ""
+#~ "Votre nom d'utilisateur et votre mot de passe ne correspondent pas. "
+#~ "Veuillez réessayer."
+
+#~ msgid "User"
+#~ msgstr "Utilisateur"
+
+#~ msgid "Password"
+#~ msgstr "Mot de passe"
+
+#~ msgid "Login"
+#~ msgstr "Se connecter"

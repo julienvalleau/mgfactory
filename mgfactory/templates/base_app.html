@@ -1,0 +1,103 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block block-app %}
+{% if user.is_authenticated %}
+<div class="header-main">
+    <nav class="base-menu-deroulant spe-menu-deroulant-top-main">
+        <ul>
+            <li><a href="#">{% translate "Dashboard" %}</a></li>
+            <li><a href="/admin">{% translate "Administration" %}</a></li>
+            <li><a href="{% url 'logout' %}">{% translate "Log off" %}</a></li>
+            <li class="menu-deroulant item-menu-language"><a href="#">{% translate "Language" %}</a>
+                <ul class="sous-menu spe-sous-menu">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        {% if LANGUAGE_CODE != language.code %}
+                            <li>
+                                <form id="set_language{{ forloop.counter }}" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                                    <input name="next" type="hidden" value="{{ request.get_full_path }}">
+                                    <input name="language" type="hidden" value="{{ language.code }}">
+                                </form>
+                                <a href="#" onclick="document.getElementById('set_language{{ forloop.counter }}').submit();return false;">{{ language.name_translated }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <header class="header-logo">
+        <div class="logo">
+            <img src="{% static 'img/logo.png' %}" alt="{% translate "Solution logo" %}">
+            <h1 class="solution-name">mgFactory</h1>
+            <h1 class="usine-name">Masters Composite</h1>
+        </div>
+    </header>
+        
+    <nav class="base-menu-deroulant">
+        <ul>
+            <li class="menu-deroulant"><a href="#">{% translate "Raw materials" %}</a>
+                <ul class="sous-menu">
+                    <li><a href="#">{% translate "Materials" %}</a></li>
+                    <li><a href="{% url 'suppliers-index' %}">{% translate "Suppliers" %}</a></li>
+                    <li><a href="#">{% translate "Orders" context "Commandes de matières premières" %}</a></li>
+                </ul>
+            </li>
+            <li class="menu-deroulant"><a href="#">{% translate "Production" %}</a>
+                <ul class="sous-menu">
+                    <li><a href="#">{% translate "Parts" %}</a></li>
+                    <li><a href="#">{% translate "Parts in progress" %}</a></li>
+                    <li><a href="#">{% translate "Groups of parts" %}</a></li>
+                    <li><a href="#">{% translate "Jigs" %}</a></li>
+                    <li><a href="#">{% translate "Molds" %}</a></li>
+                    <li><a href="#">{% translate "Backing molds" %}</a></li>
+                    <li><a href="#">{% translate "Matrices" %}</a></li>
+                </ul>
+            </li>
+            <li class="menu-deroulant"><a href="#">{% translate "Purchase orders" %}</a>
+                <ul class="sous-menu">
+                    <li><a href="#">{% translate "Customers" %}</a></li>
+                    <li><a href="#">{% translate "Orders" context "commandes clients" %}</a></li>
+                </ul>
+            </li>
+            <li class="menu-deroulant"><a href="#">{% translate "Shipments" %}</a>
+                <ul class="sous-menu">
+                    <li><a href="#">{% translate "Shipments" %}</a></li>
+                    <li><a href="#">{% translate "Repurchases" %}</a></li>
+                </ul>
+            </li>
+            <li><a href="#">{% translate "Labor" %}</a></li>
+            <li class="menu-deroulant"><a href="#">{% translate "Quality" %}</a>
+                <ul class="sous-menu">
+                    <li><a href="#">NCR</a></li>
+                    <li><a href="#">RMA</a></li>
+                    <li><a href="#">{% translate "Quality alerts" %}</a></li>
+                </ul>
+            </li>                        
+        </ul>
+    </nav>
+
+    {% block block-content %}{% endblock %}
+
+    <script src="{% static 'js/script.js' %}"></script>
+</div>
+
+{% else %}
+<div class="banner-login">
+    <div class="header-logo banner">
+        <div class="logo" >
+            <img src="{% static 'img/logo.png' %}" alt="{% translate "Solution logo" %}">
+            <h1 class="solution-name">mgFactory</h1>
+            <h1 class="usine-name">Masters Composite</h1>
+        </div>
+    </div>
+    <p>{% translate "Please login to see this page." %}</p>
+    <a class="button-rounded-green link-button" href="{% url 'login' %}">{% translate "Log In" %}</a>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% load i18n %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+        <p>Your account doesn't have access to this page. To proceed,
+        please login with an account that has access.</p>
+    {% else %}
+        <p>Please login to see this page.</p>
+    {% endif %}
+{% endif %}
+
+{% block block-app %}
+<div class="content-center">
+    <div class="login">
+        <div class="header-logo">
+            <div class="logo">
+                <img src="{% static 'img/logo.png' %}" alt="{% translate 'Solution logo' %}">
+                <h1 class="solution-name">mgFactory</h1>
+                <h1 class="usine-name">Masters Composite</h1>
+            </div>
+        </div>
+        <div class="status-login">
+            {% if form.errors %}
+            <p>{% translate "Your username and password didn't match. Please try again." %}</p>
+            {% endif %}
+        </div>
+        <form method="post" action="{% url 'login' %}">{% csrf_token %}
+            <div class="input-login ic1">
+                <input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username" placeholder=" ">
+                <div class="cut-login"></div>
+                <label for="id_username" class="placeholder-login">{% translate "User" %}</label>
+            </div>
+            <div class="input-login ic2">
+                <input type="password" name="password" autocomplete="current-password" required id="id_password" placeholder=" ">
+                <div class="cut-login"></div>
+                <label for="id_password" class="placeholder-login">{% translate "Password" %}</label>
+            </div>
+            <input class="button-rounded-green" type="submit" value="{% translate "Log in" %}">
+            <input type="hidden" name="next" value="{{ next }}" />
+        </form>
+    </div>
+</div>
+{% endblock %}
