@@ -1,9 +1,12 @@
+/* Importation des polices de caractères */
+@import url("font.css");
+
 :root {
   /* Hauteur fixe */
   --height-header-main: calc(var(--height-top-section1)  + var(--height-top-section2) + var(--height-menu-top-main) + var(--height-menu-main) + var(--height-header-logo) + var(--height-title-content-sub) + 30px);
   --height-top-section1: 40px; /* Hauteur du haut de section1, en dessous du titre de section */
   --height-top-section2: 49px; /* Hauteur du haut de section2, en dessous du haut de section1 */
-  --height-menu-top-main: 20px; /* Hauteur du menu tout en haut */ 
+  --height-menu-top-main: 27px; /* Hauteur du menu tout en haut */ 
   --height-menu-main : 45px; /* Hauteur du menu principal */ 
   --height-header-logo : 70px; /* Hauteur de l'entête avec le logo */
   --height-title-content-sub: 20px; /* Hauteur du titre de la section */
@@ -14,56 +17,71 @@
   --width-item-menu-language: 150px; /* Largeur de l'item menu pour le choix des langues */
   --min-width--application: 1080px; /* Largeur minimal de l'application */
 
-  /* Palette de couleurs */
+  /* Couleurs */
+
+  /* Couleur de la police en générale */
+  --colorText: #3C5873;
+
+  /* Couleur de fond générale */
+  --colorBackground: #fafafa;
+
+  /* Menu tout en haut */
+  --colorTextTopMenu : var(--colorText);
+  --colorTextTopMenuHover:  #616161;
+  --colorBackgroundTopMenu : #f5f5f5;
+  --colorBackgroundTopMenuHover : #eeeeee;
+  --colorTextTopMenuSubMenu: var(--colorText);
+  --colorBackgroundTopMenuSubMenuHover: #81c784;
+  --colorTopMenuBorder: #D8D8D8;
+
+  /* Bannière logo et usine */
+  --colorBackgroundHeaderLogo:  #fff;
+  --colorTextHeaderLogo: #757575;
+
+  /* Menu principale */
+  --colorTextMainMenu : var(--colorText);
+  --colorTextMainMenuHover:  #616161;
+  --colorBackgroundMainMenu : #fafafa;
+  --colorBackgroundMainMenuHover :  #eeeeee;
+  --colorTextMainMenuSubMenu: var(--colorText);
+  --colorBackgroundMainMenuSubMenuHover: var(--colorBackgroundTopMenuSubMenuHover);
+  --colorMainMenuBorder: #D8D8D8;
+  --colorMainMenuBorderBottomHover: #388e3c;
+
+  /* Section principale */
+  --colorBackgroundMainSection: #4caf50;
+
+  /* Ecran de connexion */
+  --colorBackgroundScreenLogin: #fff;
+  --colorBorderScreenLogin: #f5f5f5;
+  --colorTextPlaceHolderScreenLogin: #808097;
+
+  /* Boutons d'action */
+  --colorBackgroundButtonAction: #427AA1;
+
+  /* Onlgets */
+  --colorBackgroundTabActive: var(--colorBackground);
+  --colorBackgroundTab: #748291;
+
   --colorGreen1 : #198562;
   --colorGreen2 : #3dac89;
   --colorGreen3 : #166e52;
   --colorGreen4 : #00ffaf;
+  --colorGreen5 : rgb(108, 197, 169);
   --colorBlue1: #3C5873; 
   --colorBlue2: #748291;
   --colorBlue3: #417690;
-  --colorBlue4: #3C5774;
+  --colorBlue4: #2a3d52;
+  --colorBlue5: #79aec8;
   --colorGrey1: #D8D8D8; 
   --colorGrey2: #ecececf6;
   --colorGrey3: #dfdfdf;
   --colorGrey4: #acacac;
   --colorRed1: #fc121d;
-  --colorBackground: #fafafa;
 
 
   --colorBorderButtonMenu : #425C76;
   --colorLineMenu : rgb(60, 87, 116, 30%);
-
-  --colorSubMenuHover: rgb(11, 62, 45.9, 30%);
-
-  --colorInputLogin: white;
-}
-  
-@font-face {
-  font-family: "Lane - Upper";
-  src: url("../police/Lane-Upper.woff2") format("woff2"),
-      url("../police/Lane-Upper.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Lane - Narrow";
-  src: url("../police/Lane-Narrow.woff2") format("woff2"),
-      url("../police/Lane-Narrow.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Open Sans";
-  src: url("../police/OpenSans-Regular.woff2") format("woff2"),
-      url("../police/OpenSans-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 
 html, body {
@@ -75,8 +93,8 @@ body {
   box-sizing: border-box;
   background-color: var(--colorBackground);
   color: #fff;
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.05em;
 }
 
 .header-main {
@@ -89,19 +107,19 @@ body {
 }
 
 .header-logo {
+  color: var(--colorTextHeaderLogo);
   width: 100%;
-  background-color: var(--colorBlue3);
+  background-color: var(--colorBackgroundHeaderLogo);
   display: flex;
   justify-content: center;
   height: var(--height-header-logo);
-  font-family: "Lane - Narrow", Arial, Helvetica, sans-serif;
 }
 
 .banner-login {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--colorBlue3);
+  background: var(--colorBackgroundScreenLogin);
 }
 
 .banner-login > a {
@@ -123,10 +141,12 @@ body {
 .usine-name {
   font-size: 2em;
   margin-left: 50px;
+  font-weight: 300;
 }
 
 .logo {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -136,10 +156,16 @@ body {
 }
 
 .solution-name {
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 1.5em;
+  font-weight: 300;
   margin-left: 2px;
 }
+
+.small {
+  font-size: 1.4em;
+}
+
+/*Menu déroulant et ses spécifiques*/
 
 .base-menu-deroulant {
   width: 100%;
@@ -151,7 +177,11 @@ body {
 
 .base-menu-deroulant li a {
   text-decoration: none;
-  color: var(--colorBlue4);
+  color: var(--colorTextMainMenu);
+}
+
+.spe-menu-deroulant-top-main li a, .spe-menu-deroulant-top-main li p {
+  color: var(--colorTextTopMenu);
 }
 
 .base-menu-deroulant > ul{
@@ -163,12 +193,13 @@ body {
 
 .spe-menu-deroulant-top-main > ul {
   height: var(--height-menu-top-main);
+  justify-content: right;
 }
 
 .base-menu-deroulant > ul > li{
-  background-color: #fff;
-  border-bottom: 2px solid var(--colorGrey1);
-  border-top: 2px solid var(--colorGrey1);
+  background-color: var(--colorBackgroundMainMenu);
+  border-bottom: 1px solid var(--colorMainMenuBorder);
+  border-top: 1px solid var(--colorMainMenuBorder);
   position: relative;
   height: 100%;
   width: 100%;
@@ -176,23 +207,45 @@ body {
 }
 
 .spe-menu-deroulant-top-main > ul > li {
-  background-color: var(--colorBackground);
-  border-left: 1px var(--colorBlue4) dotted;
+  background-color: var(--colorBackgroundTopMenu);
+  border-top: 0;
+  border-bottom: 1px solid var(--colorTopMenuBorder);
+  flex: 0.2;
 }
 
 .spe-menu-deroulant-top-main > ul > li.item-menu-language {
   flex: 0 0 var(--width-item-menu-language);
 }
 
-.base-menu-deroulant a{
+.spe-menu-deroulant-top-main > ul > li.menu-deroulant-info {
+  flex: 1;
+}
+
+.base-menu-deroulant a, .base-menu-deroulant p {
   font-size: 0.85em;
 }
     
-.base-menu-deroulant > ul > li:hover{
-  background-color: var(--colorGrey1);
+.base-menu-deroulant > ul > li:hover {
+  background-color: var(--colorBackgroundMainMenuHover);
 }
 
-.base-menu-deroulant > ul > li > a{
+.base-menu-deroulant > ul > li:hover > a {
+  color: var(--colorTextMainMenuHover);
+}
+
+.spe-menu-deroulant-top-main > ul > li:hover {
+  background-color: var(--colorBackgroundTopMenuHover);
+}
+
+.spe-menu-deroulant-top-main > ul > li:hover > a {
+  color: var(--colorTextTopMenuHover)
+}
+
+.base-menu-deroulant > ul > li.menu-deroulant-info:hover {
+  background-color: var(--colorBackgroundTopMenu);
+}
+
+.base-menu-deroulant > ul > li > a, .base-menu-deroulant > ul > li > p{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -225,14 +278,14 @@ body {
 @keyframes apparitionSousMenu {
   0% {
     box-shadow: 0px 3px 3px 1px rgba(0,0,0,0);
-    border-top: 3px solid #1C9E75;
+    border-top: 3px solid var(--colorMainMenuBorderBottomHover);
   }
   30% {
     box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
   }
   100% {
     max-height: 50em;
-    border-top: 3px solid #1C9E75;
+    border-top: 3px solid var(--colorMainMenuBorderBottomHover);
     box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
   }
 }
@@ -262,8 +315,16 @@ body {
   margin-top: var(--height-menu-top-main);
 }
 
+.spe-sous-menu > li > a {
+  color: var(--colorTextTopMenuSubMenu);
+}
+
 .sous-menu > li:hover {
-  background-color: var(--colorSubMenuHover);
+  background-color: var(--colorBackgroundTopMenuSubMenuHover);
+}
+
+.spe-sous-menu > li:hover {
+  background-color: var(--colorBackgroundTopMenuSubMenuHover);
 }
 
 .sous-menu > li > a {
@@ -278,10 +339,12 @@ body {
   color: #fff;
 }
 
+/* Bannière de la section */
+
 .title-section {
-  background-color: var(--colorGreen2);
-  font-weight: bold;
-  font-size: 1.4em;
+  background-color: var(--colorBackgroundMainSection);
+  font-weight: 500;
+  font-size: 1.5em;
   color: #fff;
   padding: 15px 30px 15px;
   height: var(--height-title-content-sub);
@@ -333,8 +396,8 @@ body {
 }
 
 .wrapper-tab .tab-actif {
-  background-color: var(--colorBackground);
-  color: var(--colorBlue1);
+  background-color: var(--colorBackgroundTabActive);
+  color: var(--colorText);
   pointer-events: none;
 }
 
@@ -357,22 +420,22 @@ body {
   border-top-right-radius: 5px;
   padding: 11px 11px 13px 11px;
   margin-right: 7px;
-  background-color: var(--colorGreen2);
+  background-color: var(--colorBackgroundTab);
   color: #fff;
 }
 
 .wrapper-tab li a:hover {
-  background-color: var(--colorBackground);
-  color: var(--colorBlue1);
+  background-color: var(--colorBackgroundTabHover);
+  color: var(--colorText);
 }
 
 .button-template {
   border: 0;
   height: 40px;
-  width: 140px;
-  background-color: #79aec8;
-  color: #ffffff;
-  font-size: 0.85em;
+  width: 145px;
+  background-color:var(--colorBackgroundButtonAction);
+  color: #fff;
+  font-size: 0.9em; 
   cursor: pointer;
   background-repeat: no-repeat;
   background-position-y: center;
@@ -454,7 +517,7 @@ body {
 }
 
 .status-login {
-height: 30px;
+height: 50px;
 }
 
 .status-login > p {
@@ -463,65 +526,61 @@ padding-top: 20px;
 }
 
 .login {
-background-color: var(--colorBlue3);
-box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
-border-radius: 20px;
-box-sizing: border-box;
-height: 450px;
-padding: 20px 20px 0 20px;
-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--colorBorderScreenLogin);
+  background: linear-gradient(to top, #fff, var(--colorBackgroundScreenLogin));
+  box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 390px;
+  width: 400px;
 }
 
 .login .logo {
-margin-top: 10px;
+  margin-left: 20px;
+}
+
+.login .usine-name {
+  padding-top: 20px;
 }
 
 .ic1 {
-margin-top: 60px;
+margin-top: 75px;
 }
 
 .ic2 {
-margin-top: 40px;
+margin-top: 35px;
 }
 
 .input-login {
-height: 50px;
-position: relative;
+  height: 40px;
+  position: relative;
 }
 
 .input-login input {
-background-color: #fff;
-border-radius: 12px;
-border: 0;
-box-sizing: border-box;
-color: var(--colorBlue3);
-height: 100%;
-outline: 0;
-padding: 4px 20px 0;
-width: 100%;
-font-size: 1em;
-}
-
-.cut-login {
-background-color: var(--colorBlue3);
-border-radius: 10px;
-height: 20px;
-left: 20px;
-position: absolute;
-top: -20px;
-transform: translateY(0);
-transition: transform 200ms;
-width: 93px;
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid  #eeeeee;
+  box-sizing: border-box;
+  color: var(--colorText);
+  height: 100%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 250px;
+  font-size: 1em;
 }
 
 .placeholder-login {
-color: var(--colorBlue3);
-left: 20px;
-pointer-events: none;
-position: absolute;
-transform-origin: 0 50%;
-transition: transform 200ms, color 200ms;
-top: 20px;
+  color: var(--colorTextPlaceHolderScreenLogin);
+  left: 5px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  top: 12px;
+  font-size: 0.9em;
 }
 
 .input-login input:focus ~ .cut-login,
@@ -534,26 +593,19 @@ transform: translateY(8px);
 transform: translateY(-30px) translateX(10px) scale(0.75);
 }
 
-.input-login input:not(:placeholder-shown) ~ .placeholder-login {
-color: #808097;
-}
-
-.input-login input:focus ~ .placeholder-login {
-color: #ffffff;
-}
-
 .button-rounded-green {
-  background-color: var(--colorGreen1);
+  background-color:  var(--colorBackgroundMainSection);
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
   color: #eee;
   cursor: pointer;
   font-size: 1.1em;
-  height: 50px;
+  height: 40px;
   margin-top: 38px;
   text-align: center;
-  width: 100%;
+  width: 250px;
+  font-weight: 300;
 }
 
 .link-button {
@@ -562,5 +614,6 @@ color: #ffffff;
 }
 
 .button-rounded-green:hover {
-  background-color: var(--colorGreen2);
+  opacity: 80%;
+  font-weight: 400;
 }
