@@ -1,4 +1,4 @@
-{% extends "base_generic.html" %}
+{% extends "bases/base_generic.html" %}
 {% load static %}
 {% load i18n %}
 
@@ -7,6 +7,7 @@
 <div class="header-main">
     <nav class="base-menu-deroulant spe-menu-deroulant-top-main">
         <ul>
+            <li class="menu-deroulant-info flex-0-3"><p>{% now "DATE_FORMAT" %}</p></li>
             <li class="menu-deroulant-info"><p>Connecté(e) : {% firstof user.get_full_name user.get_username %}</p></li>
             <li><a href="#">{% translate "Dashboard" %}</a></li>
             <li><a href="/admin">{% translate "Administration" %}</a></li>
@@ -90,7 +91,7 @@
 
 {% else %}
 <div class="banner-login">
-    <div class="header-logo banner">
+    <div class="header-logo">
         <div class="logo" >
             <img src="{% static 'img/logo.png' %}" alt="{% translate "Solution logo" %}">
             <h1 class="solution-name">mgFactory</h1>
@@ -98,7 +99,7 @@
         </div>
     </div>
     <p>{% translate "Please login to see this page." %}</p>
-    <a class="button-rounded-green link-button" href="{% url 'login' %}">{% translate "Log In" %}</a>
+    <button class="button-rounded-green" onclick="window.location.href = '{% url 'login' %}';">{% translate "Log In" %}</button>
 </div>
 {% endif %}
 {% endblock %}

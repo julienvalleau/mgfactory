@@ -14,7 +14,6 @@
 
   /* Largeur fixe */
   --width-data-list: 350px; /* Largeur de la liste des données */
-  --width-item-menu-language: 150px; /* Largeur de l'item menu pour le choix des langues */
   --min-width--application: 1080px; /* Largeur minimal de l'application */
 
   /* Couleurs */
@@ -28,11 +27,12 @@
   /* Menu tout en haut */
   --colorTextTopMenu : var(--colorText);
   --colorTextTopMenuHover:  #616161;
-  --colorBackgroundTopMenu : #f5f5f5;
+  --colorBackgroundTopMenu : /*#f5f5f5;*/#c0bdbd;
   --colorBackgroundTopMenuHover : #eeeeee;
   --colorTextTopMenuSubMenu: var(--colorText);
   --colorBackgroundTopMenuSubMenuHover: #81c784;
   --colorTopMenuBorder: #D8D8D8;
+  --colorBackgroundTopMenuInfo: #D8D8D8;
 
   /* Bannière logo et usine */
   --colorBackgroundHeaderLogo:  #fff;
@@ -92,7 +92,7 @@ html, body {
 body {
   box-sizing: border-box;
   background-color: var(--colorBackground);
-  color: #fff;
+  color: var(--colorText);
   font-family: "Roboto", sans-serif;
   font-size: 1.05em;
 }
@@ -119,14 +119,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: var(--colorBackgroundScreenLogin);
+}
+
+.banner-login > p {
+  margin-top: 20px;
 }
 
 .banner-login > a {
-  padding: 20px;
   text-decoration: none;
-  color: #fff;
-  text-decoration: underline;
 }
 
 .banner-login > form > input {
@@ -134,8 +134,8 @@ body {
   width: 190px;
 }
 
-.banner {
-  height: 120px;
+.banner-login .header-logo {
+  background-color: var(--colorBackground);
 }
 
 .usine-name {
@@ -213,12 +213,13 @@ body {
   flex: 0.2;
 }
 
-.spe-menu-deroulant-top-main > ul > li.item-menu-language {
-  flex: 0 0 var(--width-item-menu-language);
+.spe-menu-deroulant-top-main > ul > li.menu-deroulant-info {
+  flex: 0.7;
+  background-color: var(--colorBackgroundTopMenuInfo);
 }
 
-.spe-menu-deroulant-top-main > ul > li.menu-deroulant-info {
-  flex: 1;
+.spe-menu-deroulant-top-main > ul > li.flex-0-3 {
+  flex: 0.3;
 }
 
 .base-menu-deroulant a, .base-menu-deroulant p {
@@ -242,7 +243,7 @@ body {
 }
 
 .base-menu-deroulant > ul > li.menu-deroulant-info:hover {
-  background-color: var(--colorBackgroundTopMenu);
+  background-color: var(--colorBackgroundTopMenuInfo);
 }
 
 .base-menu-deroulant > ul > li > a, .base-menu-deroulant > ul > li > p{
@@ -425,7 +426,7 @@ body {
 }
 
 .wrapper-tab li a:hover {
-  background-color: var(--colorBackgroundTabHover);
+  background-color: var(--colorBackgroundTabActive);
   color: var(--colorText);
 }
 
@@ -531,16 +532,18 @@ padding-top: 20px;
   align-items: center;
   justify-content: center;
   border: 2px solid var(--colorBorderScreenLogin);
-  background: linear-gradient(to top, #fff, var(--colorBackgroundScreenLogin));
-  box-shadow: 0px 3px 3px 1px rgba(0,0,0,0.3);
   border-radius: 20px;
   box-sizing: border-box;
   height: 390px;
-  width: 400px;
+  width: 450px;
 }
 
 .login .logo {
   margin-left: 20px;
+}
+
+.login .header-logo {
+  background-color: var(--colorBackground);
 }
 
 .login .usine-name {
@@ -552,7 +555,7 @@ margin-top: 75px;
 }
 
 .ic2 {
-margin-top: 35px;
+margin-top: 30px;
 }
 
 .input-login {
@@ -580,17 +583,8 @@ margin-top: 35px;
   position: absolute;
   transform-origin: 0 50%;
   top: 12px;
-  font-size: 0.9em;
-}
-
-.input-login input:focus ~ .cut-login,
-.input-login input:not(:placeholder-shown) ~ .cut-login {
-transform: translateY(8px);
-}
-
-.input-login input:focus ~ .placeholder-login,
-.input-login input:not(:placeholder-shown) ~ .placeholder-login {
-transform: translateY(-30px) translateX(10px) scale(0.75);
+  font-size: 1em;
+  transform: translateY(-30px) translateX(10px) scale(0.75);
 }
 
 .button-rounded-green {
@@ -611,9 +605,4 @@ transform: translateY(-30px) translateX(10px) scale(0.75);
 .link-button {
   width: 190px;
   margin-bottom: 30px;
-}
-
-.button-rounded-green:hover {
-  opacity: 80%;
-  font-weight: 400;
 }
