@@ -3,43 +3,13 @@
 
 {% block block-content-details %}
 <div class="wrapper-list">
-    <table class="table-list">
-        <thead><tr><th>{% translate "Nom" %}</th><th>{% translate "Ville" %}</th></tr></thead>
-        <!--tfoot><tr><td>{% translate "Nom" %}</td><td>{% translate "Ville" %}</td></tr></tfoot>-->
-        <tbody>
-            <tr><td>Fournisseur 11111111111111a</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr><td>Fournisseur 1</td><td>La Rochelle</td></tr>
-            <tr hx-get="/contacts/?page=2"
-                hx-trigger="revealed"
-                hx-swap="afterend"><td>Load</td><td>Load</td></tr>
-        </tbody>
-    </table>
+    <div class="supplier-list">
+        {% for supplier in suppliers %}
+            <div class="supplier-row">
+                <p>{{ supplier.name }}</p>
+            </div>
+        {% endfor %}
+    </div>
 </div>
 
 <div class="wrapper-detail">
@@ -145,6 +115,21 @@
         </div>
     </div>
 </div>
+
+<!-- jQuery CDN hosted by Google -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- jScroll plug-in CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
+
+<script>
+    jQuery(function ($) {
+        var $list = $('.wrapper-list');
+        $list.jscroll({
+            padding: 100,
+            contentSelector: 'supplier-row'
+        });
+    });
+</script>
 
 <!--
     <div id="sidebar-filter">

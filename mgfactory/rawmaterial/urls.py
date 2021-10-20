@@ -1,7 +1,8 @@
 from django.urls import path
 
-from . import views
+from rawmaterial import views
+from rawmaterial.views import SuppliersListView
 
 urlpatterns = [
-    path('suppliers/', views.suppliers, name='suppliers-index'),
+    path('suppliers/', SuppliersListView.as_view(), name='suppliers'),
 ]
