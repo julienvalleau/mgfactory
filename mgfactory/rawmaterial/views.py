@@ -6,6 +6,5 @@ from rawmaterial.models import Supplier
 
 class SuppliersListView(ListView):
   model = Supplier
-  context_object_name = 'suppliers'
-  paginate_by = 30
+  paginate_by = 25
   template_name = 'rawmaterial/suppliers.html'

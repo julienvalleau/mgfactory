@@ -5,7 +5,7 @@
   /* Hauteur fixe */
   --height-header-main: calc(var(--height-top-section1)  + var(--height-top-section2) + var(--height-menu-top-main) + var(--height-menu-main) + var(--height-header-logo) + var(--height-title-content-sub) + 30px);
   --height-top-section1: 40px; /* Hauteur du haut de section1, en dessous du titre de section */
-  --height-top-section2: 49px; /* Hauteur du haut de section2, en dessous du haut de section1 */
+  --height-top-section2: 27px; /* Hauteur du haut de section2, en dessous du haut de section1 */
   --height-menu-top-main: 27px; /* Hauteur du menu tout en haut */ 
   --height-menu-main : 45px; /* Hauteur du menu principal */ 
   --height-header-logo : 70px; /* Hauteur de l'entête avec le logo */
@@ -62,6 +62,9 @@
   /* Onlgets */
   --colorBackgroundTabActive: var(--colorBackground);
   --colorBackgroundTab: #748291;
+
+  /* Pagination */
+  --colorTextPaginator: #748291;
 
   --colorGreen1 : #198562;
   --colorGreen2 : #3dac89;
@@ -394,6 +397,7 @@ body {
   background: linear-gradient(to top, #fff, var(--colorGrey4));
   font-size: 0.85em;
   border-bottom: 1px solid var(--colorGrey1);
+  height: 48px;
 }
 
 .wrapper-tab .tab-actif {
@@ -499,12 +503,22 @@ body {
 }
 
 .number-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 0.83em;
-  color: var(--colorGrey4);
-  padding: 7px 0 0 0;
-  margin-left: 6px;
-  width: calc(var(--width-data-list) - 5px);
+  color: var(--colorTextPaginator);
+  width: calc(var(--width-data-list) + 1px);
   height: var(--height-top-section2);
+}
+
+.number-items a {
+  text-decoration: none;
+  color: var(--colorTextPaginator);
+}
+
+.number-items a:hover {
+  text-decoration: underline;
 }
 
 /* Login screen */

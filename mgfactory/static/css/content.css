@@ -1,7 +1,7 @@
 .wrapper-list {
 	width: var(--width-data-list);
 	position: fixed;
-	top: calc(var(--height-header-main) - 20px);
+	top: calc(var(--height-header-main));
 	bottom:0;
 	overflow:auto;
   color: var(--colorBlue1);
@@ -13,9 +13,14 @@
   border-collapse: collapse;
 }
 
-.table-list thead, tfoot {
+.table-list thead {
   background-color: var(--colorBlue2);
   color: #fff;
+}
+
+.table-list thead {
+  position: sticky;
+  top: 0;
 }
 
 .table-list th, td {
@@ -39,7 +44,7 @@
   position: relative;
   margin-left: calc(var(--width-data-list) + 15px);
   margin-right: 10px;
-  top: calc(var(--height-header-main) + 10px);
+  margin-top: 30px;
   height: calc(100% - var(--height-header-main) - 10px);
   width: calc(100% - var(--width-data-list) - 15px);
 }

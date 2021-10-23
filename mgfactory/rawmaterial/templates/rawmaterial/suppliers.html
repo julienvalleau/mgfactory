@@ -2,14 +2,43 @@
 {% load i18n %}
 
 {% block block-content-details %}
-<div class="wrapper-list">
-    <div class="supplier-list">
-        {% for supplier in suppliers %}
-            <div class="supplier-row">
-                <p>{{ supplier.name }}</p>
-            </div>
-        {% endfor %}
+<div class="top-section2">
+    <div class="number-items">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">❮❮</a>
+            &nbsp;&nbsp;
+            <a href="?page={{ page_obj.previous_page_number }}">❮</a>
+            &nbsp;&nbsp;
+        {% endif %}
+        <p>Page {{ page_obj.number }} {% translate "of" %} {{ page_obj.paginator.num_pages }}</p>
+        {% if page_obj.has_next %}
+            &nbsp;&nbsp;
+            <a href="?page={{ page_obj.next_page_number }}">❯</a>
+            &nbsp;&nbsp;
+            <a href="?page={{ page_obj.paginator.num_pages }}">❯❯</a>
+        {% endif %}
     </div>
+    <div class="wrapper-tab">
+        <ul>
+            <li><a class="tab-actif" href="#">{% translate "Identification" %}</a></li>
+            <li><a href="#">{% translate "Adress(s)" %}</a></li>
+            <li><a href="#">{% translate "Interlocutor(s)" %}</a></li>
+            <li><a href="#">{% translate "Order(s)" context "commandes en cours du fournisseur" %}</a></li>
+        </ul>
+    </div>
+</div>
+<div class="wrapper-list">
+    <table class="table-list">
+        <thead><tr><th>{% translate "Name" %}</th><th>{% translate "City" %}</th></tr></thead>
+        <tbody>
+            {% for supplier in page_obj %}
+                <tr>
+                    <td>{{ supplier.name }}</td>
+                    <td>{{ supplier.city }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 
 <div class="wrapper-detail">
@@ -115,21 +144,6 @@
         </div>
     </div>
 </div>
-
-<!-- jQuery CDN hosted by Google -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<!-- jScroll plug-in CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
-
-<script>
-    jQuery(function ($) {
-        var $list = $('.wrapper-list');
-        $list.jscroll({
-            padding: 100,
-            contentSelector: 'supplier-row'
-        });
-    });
-</script>
 
 <!--
     <div id="sidebar-filter">

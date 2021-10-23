@@ -2,30 +2,77 @@ from django.db import models
 from django.db.models.base import Model
 from django.utils.translation import ugettext_lazy as _
 
-"""
-Pays
-"""
 COUNTRY = (
-    # Translators: Pays
     ('FR', _('France')),
     ('CA', _('Canada')),
     ('US', _('United States')),
 )
 
-class City(models.Model):
-    """
-    Ville
-    """
-    name = models.CharField(max_length=100, blank=False)
-    zip_code = models.CharField(max_length=20, blank=False)
-    state = models.CharField(max_length=100, null=True, blank=True)
-    county = models.CharField(max_length=100, null=True, blank=True)
-    community = models.CharField(max_length=100, null=True, blank=True)
-    country = models.CharField(max_length=2, choices=COUNTRY, blank=False)
+PROVINCE = (
+    ('AB', _('Alberta')),
+    ('BC', _('British Columbia')),
+    ('MB', _('Manitoba')),
+    ('NB', _('New Brunswick')),
+    ('NL', _('Newfoundland and Labrador')),
+    ('NS', _('Nova Scotia')),
+    ('NT', _('Northwest Territories')),
+    ('NU', _('Nunavut')),
+    ('ON', _('Ontario')),
+    ('PE', _('Prince Edward Island')),
+    ('QC', _('Quebec')),
+    ('SK', _('Saskatchewan')),
+    ('YT', _('Yukon'))
+)
 
-    class Meta:
-        verbose_name_plural = _('Cities')
-        verbose_name = _("City")
-
-    def __str__(self):
-        return "{} {} {}".format(self.name, self.zip_code, self.get_country_display())
+STATE = (
+    ('AL', _('Alabama')),
+    ('AK', _('Alaska')),
+    ('AZ', _('Arizona')),
+    ('AR', _('Arkansas')),
+    ('CA', _('California')),
+    ('CO', _('Colorado')),
+    ('CT', _('Connecticut')),
+    ('DE', _('Delaware')),
+    ('FL', _('Florida')),
+    ('GA', _('Georgia')),
+    ('HI', _('Hawaii')),
+    ('ID', _('Idaho')),
+    ('IL', _('Illinois')),
+    ('IN', _('Indiana')),
+    ('IA', _('Iowa')),
+    ('KS', _('Kansas')),
+    ('KY', _('Kentucky')),
+    ('LA', _('Louisiana')),
+    ('ME', _('Maine')),
+    ('MD', _('Maryland')),
+    ('MA', _('Massachusetts')),
+    ('MI', _('Michigan')),
+    ('MN', _('Minnesota')),
+    ('MS', _('Mississippi')),
+    ('MO', _('Missouri')),
+    ('MT', _('Montana')),
+    ('NE', _('Nebraska')),
+    ('NV', _('Nevada')),
+    ('NH', _('New Hampshire')),
+    ('NJ', _('New Jersey')),
+    ('NM', _('New Mexico')),
+    ('NY', _('New York')),
+    ('NC', _('North Carolina')),
+    ('ND', _('North Dakota')),
+    ('OH', _('Ohio')),
+    ('OK', _('Oklahoma')),
+    ('OR', _('Oregon')),
+    ('PA', _('Pennsylvania')),
+    ('RI', _('Rhode Island')),
+    ('SC', _('South Carolina')),
+    ('SD', _('South Dakota')),
+    ('TN', _('Tennessee')),
+    ('TX', _('Texas')),
+    ('UT', _('Utah')),
+    ('VT', _('Vermont')),
+    ('VA', _('Virginia')),
+    ('WA', _('Washington')),
+    ('WV', _('West Virginia')),
+    ('WI', _('Wisconsin')),
+    ('WY', _('Wyoming')),
+)

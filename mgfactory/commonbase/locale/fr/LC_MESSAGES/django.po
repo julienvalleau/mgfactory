@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-06 23:29+0200\n"
+"POT-Creation-Date: 2021-10-21 21:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,114 +18,270 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: commonbase/admin.py:5 commonbase/admin.py:6
+#: commonbase/admin.py:4 commonbase/admin.py:5
 msgid "mgFactory administration"
 msgstr "Administration de mgFactory"
 
-#. Translators: Pays
-#: commonbase/models.py:10
+#: commonbase/models.py:6
 msgid "France"
 msgstr ""
 
-#: commonbase/models.py:11
+#: commonbase/models.py:7
 msgid "Canada"
 msgstr ""
 
-#: commonbase/models.py:12
+#: commonbase/models.py:8
 msgid "United States"
 msgstr "États-Unis"
 
-#: commonbase/models.py:27
-msgid "Cities"
-msgstr "Villes"
+#: commonbase/models.py:12
+msgid "Alberta"
+msgstr ""
+
+#: commonbase/models.py:13
+msgid "British Columbia"
+msgstr "Colombie Britannique"
+
+#: commonbase/models.py:14
+msgid "Manitoba"
+msgstr ""
+
+#: commonbase/models.py:15
+msgid "New Brunswick"
+msgstr "Nouveau-Brunswick"
+
+#: commonbase/models.py:16
+msgid "Newfoundland and Labrador"
+msgstr "Terre-Neuve-et-Labrador"
+
+#: commonbase/models.py:17
+msgid "Nova Scotia"
+msgstr "Nouvelle-Écosse"
+
+#: commonbase/models.py:18
+msgid "Northwest Territories"
+msgstr "Territoires du Nord-Ouest"
+
+#: commonbase/models.py:19
+msgid "Nunavut"
+msgstr ""
+
+#: commonbase/models.py:20
+msgid "Ontario"
+msgstr ""
+
+#: commonbase/models.py:21
+msgid "Prince Edward Island"
+msgstr "l'Île-du-Prince-Édouard"
+
+#: commonbase/models.py:22
+msgid "Quebec"
+msgstr "Québec"
+
+#: commonbase/models.py:23
+msgid "Saskatchewan"
+msgstr ""
+
+#: commonbase/models.py:24
+msgid "Yukon"
+msgstr ""
 
 #: commonbase/models.py:28
-msgid "City"
-msgstr "Ville"
+msgid "Alabama"
+msgstr ""
 
-#~ msgid "Dashboard"
-#~ msgstr "Tableau de bord"
+#: commonbase/models.py:29
+msgid "Alaska"
+msgstr ""
 
-#, fuzzy
-#~| msgid "mgFactory administration"
-#~ msgid "Administration"
-#~ msgstr "Administration de mgFactory"
+#: commonbase/models.py:30
+msgid "Arizona"
+msgstr ""
 
-#~ msgid "Log off"
-#~ msgstr "Se déconnecter"
+#: commonbase/models.py:31
+msgid "Arkansas"
+msgstr ""
 
-#~ msgid "Language"
-#~ msgstr "Langue"
+#: commonbase/models.py:32
+msgid "California"
+msgstr "Californie"
 
-#~ msgid "Solution logo"
-#~ msgstr "Logo de la solution"
+#: commonbase/models.py:33
+msgid "Colorado"
+msgstr ""
 
-#~ msgid "Raw materials"
-#~ msgstr "Matières premières"
+#: commonbase/models.py:34
+msgid "Connecticut"
+msgstr ""
 
-#~ msgid "Materials"
-#~ msgstr "Matières"
+#: commonbase/models.py:35
+msgid "Delaware"
+msgstr ""
 
-#~ msgid "Suppliers"
-#~ msgstr "Fournisseurs"
+#: commonbase/models.py:36
+msgid "Florida"
+msgstr "Floride"
 
-#~ msgctxt "Commandes de matières premières"
-#~ msgid "Orders"
-#~ msgstr "Commandes"
+#: commonbase/models.py:37
+msgid "Georgia"
+msgstr "Géorgie"
 
-#~ msgid "Parts"
-#~ msgstr "Pièces"
+#: commonbase/models.py:38
+msgid "Hawaii"
+msgstr "Hawaï"
 
-#~ msgid "Parts in progress"
-#~ msgstr "Pièces en cours"
+#: commonbase/models.py:39
+msgid "Idaho"
+msgstr ""
 
-#~ msgid "Groups of parts"
-#~ msgstr "Groupes de pièces"
+#: commonbase/models.py:40
+msgid "Illinois"
+msgstr ""
 
-#~ msgid "Jigs"
-#~ msgstr "Gabarits"
+#: commonbase/models.py:41
+msgid "Indiana"
+msgstr ""
 
-#~ msgid "Molds"
-#~ msgstr "Moules"
+#: commonbase/models.py:42
+msgid "Iowa"
+msgstr ""
 
-#~ msgid "Backing molds"
-#~ msgstr "Contre-moules"
+#: commonbase/models.py:43
+msgid "Kansas"
+msgstr ""
 
-#~ msgid "Purchase orders"
-#~ msgstr "Commandes clients"
+#: commonbase/models.py:44
+msgid "Kentucky"
+msgstr ""
 
-#~ msgid "Customers"
-#~ msgstr "Clients"
+#: commonbase/models.py:45
+msgid "Louisiana"
+msgstr "Louisiane"
 
-#~ msgctxt "commandes clients"
-#~ msgid "Orders"
-#~ msgstr "Commandes"
+#: commonbase/models.py:46
+msgid "Maine"
+msgstr ""
 
-#~ msgid "Shipments"
-#~ msgstr "Expéditions"
+#: commonbase/models.py:47
+msgid "Maryland"
+msgstr ""
 
-#~ msgid "Repurchases"
-#~ msgstr "Rachats"
+#: commonbase/models.py:48
+msgid "Massachusetts"
+msgstr ""
 
-#~ msgid "Labor"
-#~ msgstr "Main d'oeuvre"
+#: commonbase/models.py:49
+msgid "Michigan"
+msgstr ""
 
-#~ msgid "Quality"
-#~ msgstr "Qualité"
+#: commonbase/models.py:50
+msgid "Minnesota"
+msgstr ""
 
-#~ msgid "Quality alerts"
-#~ msgstr "Alerts qualités"
+#: commonbase/models.py:51
+msgid "Mississippi"
+msgstr ""
 
-#~ msgid "Your username and password didn't match. Please try again."
-#~ msgstr ""
-#~ "Votre nom d'utilisateur et votre mot de passe ne correspondent pas. "
-#~ "Veuillez réessayer."
+#: commonbase/models.py:52
+msgid "Missouri"
+msgstr ""
 
-#~ msgid "User"
-#~ msgstr "Utilisateur"
+#: commonbase/models.py:53
+msgid "Montana"
+msgstr ""
 
-#~ msgid "Password"
-#~ msgstr "Mot de passe"
+#: commonbase/models.py:54
+msgid "Nebraska"
+msgstr ""
 
-#~ msgid "Login"
-#~ msgstr "Se connecter"
+#: commonbase/models.py:55
+msgid "Nevada"
+msgstr ""
+
+#: commonbase/models.py:56
+msgid "New Hampshire"
+msgstr ""
+
+#: commonbase/models.py:57
+msgid "New Jersey"
+msgstr ""
+
+#: commonbase/models.py:58
+msgid "New Mexico"
+msgstr "Nouveau-Mexique"
+
+#: commonbase/models.py:59
+msgid "New York"
+msgstr ""
+
+#: commonbase/models.py:60
+msgid "North Carolina"
+msgstr ""
+
+#: commonbase/models.py:61
+msgid "North Dakota"
+msgstr "Dakota du Nord"
+
+#: commonbase/models.py:62
+msgid "Ohio"
+msgstr ""
+
+#: commonbase/models.py:63
+msgid "Oklahoma"
+msgstr ""
+
+#: commonbase/models.py:64
+msgid "Oregon"
+msgstr ""
+
+#: commonbase/models.py:65
+msgid "Pennsylvania"
+msgstr "Pennsylvanie"
+
+#: commonbase/models.py:66
+msgid "Rhode Island"
+msgstr ""
+
+#: commonbase/models.py:67
+msgid "South Carolina"
+msgstr "Caroline du Sud"
+
+#: commonbase/models.py:68
+msgid "South Dakota"
+msgstr "Dakota du Sud"
+
+#: commonbase/models.py:69
+msgid "Tennessee"
+msgstr ""
+
+#: commonbase/models.py:70
+msgid "Texas"
+msgstr ""
+
+#: commonbase/models.py:71
+msgid "Utah"
+msgstr ""
+
+#: commonbase/models.py:72
+msgid "Vermont"
+msgstr ""
+
+#: commonbase/models.py:73
+msgid "Virginia"
+msgstr "Virginie"
+
+#: commonbase/models.py:74
+msgid "Washington"
+msgstr ""
+
+#: commonbase/models.py:75
+msgid "West Virginia"
+msgstr "Virginie-Occidentale"
+
+#: commonbase/models.py:76
+msgid "Wisconsin"
+msgstr ""
+
+#: commonbase/models.py:77
+msgid "Wyoming"
+msgstr ""

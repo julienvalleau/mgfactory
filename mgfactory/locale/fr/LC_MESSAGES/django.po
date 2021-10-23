@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-06 23:29+0200\n"
+"POT-Creation-Date: 2021-10-21 21:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,170 +18,159 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: templates/base_app.html:10
+#: templates/bases/base_app.html:11
+msgid "Logged"
+msgstr ""
+
+#: templates/bases/base_app.html:12
 msgid "Dashboard"
 msgstr "Tableau de bord"
 
-#: templates/base_app.html:11
+#: templates/bases/base_app.html:13
 msgid "Administration"
 msgstr "Administration"
 
-#: templates/base_app.html:12
+#: templates/bases/base_app.html:14
 msgid "Log off"
 msgstr "Se déconnecter"
 
-#: templates/base_app.html:13
+#: templates/bases/base_app.html:15
 msgid "Language"
 msgstr "Langue"
 
-#: templates/base_app.html:36 templates/base_app.html:94
-#: templates/registration/login.html:19
+#: templates/bases/base_app.html:38 templates/bases/base_app.html:94
+#: templates/registration/login.html:24
 msgid "Solution logo"
 msgstr "Logo de la solution"
 
-#: templates/base_app.html:44
+#: templates/bases/base_app.html:46
 msgid "Raw materials"
 msgstr "Matières premières"
 
-#: templates/base_app.html:46
+#: templates/bases/base_app.html:48
 msgid "Materials"
 msgstr "Matières"
 
-#: templates/base_app.html:47 templates/template_menu_details.html:5
+#: templates/bases/base_app.html:49 templates/composants/header_section.html:5
 msgid "Suppliers"
 msgstr "Fournisseurs"
 
-#: templates/base_app.html:48
+#: templates/bases/base_app.html:50
 msgctxt "Commandes de matières premières"
 msgid "Orders"
 msgstr "Commandes"
 
-#: templates/base_app.html:51
+#: templates/bases/base_app.html:53
 msgid "Production"
 msgstr "Production"
 
-#: templates/base_app.html:53
+#: templates/bases/base_app.html:55
 msgid "Parts"
 msgstr "Pièces"
 
-#: templates/base_app.html:54
+#: templates/bases/base_app.html:56
 msgid "Parts in progress"
 msgstr "Pièces en cours"
 
-#: templates/base_app.html:55
+#: templates/bases/base_app.html:57
 msgid "Groups of parts"
 msgstr "Groupes de pièces"
 
-#: templates/base_app.html:56
+#: templates/bases/base_app.html:58
 msgid "Jigs"
 msgstr "Gabarits"
 
-#: templates/base_app.html:57
+#: templates/bases/base_app.html:59
 msgid "Molds"
 msgstr "Moules"
 
-#: templates/base_app.html:58
+#: templates/bases/base_app.html:60
 msgid "Backing molds"
 msgstr "Contres-moules"
 
-#: templates/base_app.html:59
+#: templates/bases/base_app.html:61
 msgid "Matrices"
 msgstr "Matrices"
 
-#: templates/base_app.html:62
+#: templates/bases/base_app.html:64
 msgid "Purchase orders"
 msgstr "Commandes clients"
 
-#: templates/base_app.html:64
+#: templates/bases/base_app.html:66
 msgid "Customers"
 msgstr "Clients"
 
-#: templates/base_app.html:65
+#: templates/bases/base_app.html:67
 msgctxt "commandes clients"
 msgid "Orders"
 msgstr "Commandes"
 
-#: templates/base_app.html:68 templates/base_app.html:70
+#: templates/bases/base_app.html:70 templates/bases/base_app.html:72
 msgid "Shipments"
 msgstr "Expéditions"
 
-#: templates/base_app.html:71
+#: templates/bases/base_app.html:73
 msgid "Repurchases"
 msgstr "Rachats"
 
-#: templates/base_app.html:74
+#: templates/bases/base_app.html:76
 msgid "Labor"
 msgstr "Main d'oeuvre"
 
-#: templates/base_app.html:75
+#: templates/bases/base_app.html:77
 msgid "Quality"
 msgstr "Qualité"
 
-#: templates/base_app.html:79
+#: templates/bases/base_app.html:81
 msgid "Quality alerts"
 msgstr "Alertes de qualité"
 
-#: templates/base_app.html:99
+#: templates/bases/base_app.html:99
 msgid "Please login to see this page."
 msgstr "Veuillez vous connecter pour voir cette page."
 
-#: templates/base_app.html:100
+#: templates/bases/base_app.html:100
 msgid "Log In"
 msgstr "Connexion"
 
-#: templates/registration/login.html:26
-msgid "Your username and password didn't match. Please try again."
-msgstr "Votre nom d'utilisateur et votre mot de passe ne correspondent pas. Veuillez réessayer."
-
-#: templates/registration/login.html:33
-msgid "User"
-msgstr "Utilisateur"
-
-#: templates/registration/login.html:38
-msgid "Password"
-msgstr "Mot de passe"
-
-#: templates/registration/login.html:40
-msgid "Log in"
-msgstr "Connexion"
-
-#: templates/template_menu_details.html:12
+#: templates/composants/header_section.html:12
 msgid "Add"
 msgstr "Ajouter"
 
-#: templates/template_menu_details.html:13
+#: templates/composants/header_section.html:13
 msgid "Edit"
 msgstr "Modifier"
 
-#: templates/template_menu_details.html:14
+#: templates/composants/header_section.html:14
 msgid "Save"
 msgstr "Enregistrer"
 
-#: templates/template_menu_details.html:15
+#: templates/composants/header_section.html:15
 msgid "Cancel"
 msgstr "Annuler"
 
-#: templates/template_menu_details.html:16
+#: templates/composants/header_section.html:16
 msgid "Print"
 msgstr "Imprimer"
 
-#: templates/template_menu_details.html:17
+#: templates/composants/header_section.html:17
 msgid "Export"
 msgstr "Exporter"
 
-#: templates/template_menu_details.html:23
-msgid "Identification"
-msgstr "Identification"
+#: templates/registration/login.html:18
+msgid "Your username and password didn't match. Please try again."
+msgstr ""
+"Votre nom d'utilisateur et votre mot de passe ne correspondent pas. Veuillez "
+"réessayer."
 
-#: templates/template_menu_details.html:24
-msgid "Addresse(s)"
-msgstr "Adresse(s)"
+#: templates/registration/login.html:32
+msgid "User"
+msgstr "Utilisateur"
 
-#: templates/template_menu_details.html:25
-msgid "Interlocutor(s)"
-msgstr "Interlocuteur(s)"
+#: templates/registration/login.html:36
+msgid "Password"
+msgstr "Mot de passe"
 
-#: templates/template_menu_details.html:26
-msgctxt "commandes en cours du fournisseur"
-msgid "Order(s)"
-msgstr "En cours"
+#: templates/registration/login.html:38
+msgid "Log in"
+msgstr "Connexion"

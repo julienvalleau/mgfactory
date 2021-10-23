@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-06 23:29+0200\n"
+"POT-Creation-Date: 2021-10-21 21:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,12 +18,67 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: rawmaterial/templates/rawmaterial/suppliers.html:7
-#: rawmaterial/templates/rawmaterial/suppliers.html:8
-msgid "Nom"
+#: rawmaterial/models.py:6 rawmaterial/templates/rawmaterial/suppliers.html:32
+msgid "Name"
+msgstr "Nom"
+
+#: rawmaterial/models.py:7
+msgid "Adress"
+msgstr "Adresse"
+
+#: rawmaterial/models.py:8
+msgid "Zip code"
+msgstr "Code postal"
+
+#: rawmaterial/models.py:9 rawmaterial/templates/rawmaterial/suppliers.html:32
+msgid "City"
+msgstr "Ville"
+
+#: rawmaterial/models.py:10
+msgid "Province"
 msgstr ""
 
-#: rawmaterial/templates/rawmaterial/suppliers.html:7
-#: rawmaterial/templates/rawmaterial/suppliers.html:8
-msgid "Ville"
-msgstr ""
+#: rawmaterial/models.py:11
+msgid "State"
+msgstr "État"
+
+#: rawmaterial/models.py:12
+msgid "Country"
+msgstr "Pays"
+
+#: rawmaterial/models.py:15
+msgid "supplier"
+msgstr "fournisseur"
+
+#: rawmaterial/templates/rawmaterial/suppliers.html:13
+msgid "of"
+msgstr "de"
+
+#: rawmaterial/templates/rawmaterial/suppliers.html:23
+msgid "Identification"
+msgstr "Identification"
+
+#: rawmaterial/templates/rawmaterial/suppliers.html:24
+msgid "Adress(s)"
+msgstr "Adresse(s)"
+
+#: rawmaterial/templates/rawmaterial/suppliers.html:25
+msgid "Interlocutor(s)"
+msgstr "Interlocuteur(s)"
+
+#: rawmaterial/templates/rawmaterial/suppliers.html:26
+msgctxt "commandes en cours du fournisseur"
+msgid "Order(s)"
+msgstr "En cours"
+
+#~ msgid "first"
+#~ msgstr "premier"
+
+#~ msgid "previous"
+#~ msgstr "précédent"
+
+#~ msgid "next"
+#~ msgstr "suivant"
+
+#~ msgid "last"
+#~ msgstr "dernier"
