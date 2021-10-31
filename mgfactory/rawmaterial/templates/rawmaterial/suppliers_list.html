@@ -1,0 +1,31 @@
+{% load i18n %}
+
+<div class="number-items">
+    {% if suppliers.has_previous %}
+        <a hx-get="?page=1" hx-target="#suppliers_list" hx-swap="innerHTML">‹‹</a>
+        &nbsp;&nbsp;
+        <a hx-get="?page={{ suppliers.previous_page_number }}" hx-target="#suppliers_list" hx-swap="innerHTML">‹</a>
+        &nbsp;&nbsp;
+    {% endif %}
+    <p>Page {{ suppliers.number }} {% translate "of" %} {{ suppliers.paginator.num_pages }}</p>
+    {% if suppliers.has_next %}
+        &nbsp;&nbsp;
+        <a hx-get="?page={{ suppliers.next_page_number }}" hx-target="#suppliers_list" hx-swap="innerHTML">›</a>
+        &nbsp;&nbsp;
+        <a hx-get="?page={{ suppliers.paginator.num_pages }}" hx-target="#suppliers_list" hx-swap="innerHTML">››</a>
+    {% endif %}
+    <p>[{{ suppliers.paginator.count }} {% translate "result(s)" %}]</p>
+</div>
+<div class="wrapper-list">
+    <table class="table-list">
+        <thead><tr><th>{% translate "Name" %}</th><th>{% translate "City" %}</th></tr></thead>
+        <tbody>
+        {% for supplier in suppliers %}
+            <tr>
+                <td><a hx-get="{% url 'supplier_details' supplier.id %}" hx-target="#supplier_details" hx-swap="innerHTML">{{ supplier.name }}</a></td>
+                <td><a hx-get="{% url 'supplier_details' supplier.id %}" hx-target="#supplier_details" hx-swap="innerHTML">{{ supplier.city }}</a></td>
+            </tr>
+        {% endfor %}        
+        </tbody>
+    </table>
+</div>
