@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-21 21:42+0200\n"
+"POT-Creation-Date: 2021-10-26 21:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: rawmaterial/models.py:6 rawmaterial/templates/rawmaterial/suppliers.html:32
+#: rawmaterial/models.py:6 rawmaterial/templates/rawmaterial/suppliers.html:34
 msgid "Name"
 msgstr "Nom"
 
@@ -30,7 +30,7 @@ msgstr "Adresse"
 msgid "Zip code"
 msgstr "Code postal"
 
-#: rawmaterial/models.py:9 rawmaterial/templates/rawmaterial/suppliers.html:32
+#: rawmaterial/models.py:9 rawmaterial/templates/rawmaterial/suppliers.html:34
 msgid "City"
 msgstr "Ville"
 
@@ -46,7 +46,7 @@ msgstr "État"
 msgid "Country"
 msgstr "Pays"
 
-#: rawmaterial/models.py:15
+#: rawmaterial/models.py:18
 msgid "supplier"
 msgstr "fournisseur"
 
@@ -54,31 +54,23 @@ msgstr "fournisseur"
 msgid "of"
 msgstr "de"
 
-#: rawmaterial/templates/rawmaterial/suppliers.html:23
+#: rawmaterial/templates/rawmaterial/suppliers.html:20
+msgid "result(s)"
+msgstr "résultat(s)"
+
+#: rawmaterial/templates/rawmaterial/suppliers.html:24
 msgid "Identification"
 msgstr "Identification"
 
-#: rawmaterial/templates/rawmaterial/suppliers.html:24
+#: rawmaterial/templates/rawmaterial/suppliers.html:25
 msgid "Adress(s)"
 msgstr "Adresse(s)"
 
-#: rawmaterial/templates/rawmaterial/suppliers.html:25
+#: rawmaterial/templates/rawmaterial/suppliers.html:26
 msgid "Interlocutor(s)"
 msgstr "Interlocuteur(s)"
 
-#: rawmaterial/templates/rawmaterial/suppliers.html:26
+#: rawmaterial/templates/rawmaterial/suppliers.html:27
 msgctxt "commandes en cours du fournisseur"
 msgid "Order(s)"
 msgstr "En cours"
-
-#~ msgid "first"
-#~ msgstr "premier"
-
-#~ msgid "previous"
-#~ msgstr "précédent"
-
-#~ msgid "next"
-#~ msgstr "suivant"
-
-#~ msgid "last"
-#~ msgstr "dernier"

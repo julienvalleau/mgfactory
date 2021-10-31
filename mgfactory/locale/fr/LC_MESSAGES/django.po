@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-21 21:42+0200\n"
+"POT-Creation-Date: 2021-10-26 21:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,7 +51,7 @@ msgstr "Matières premières"
 msgid "Materials"
 msgstr "Matières"
 
-#: templates/bases/base_app.html:49 templates/composants/header_section.html:5
+#: templates/bases/base_app.html:49 templates/composants/header_section.html:6
 msgid "Suppliers"
 msgstr "Fournisseurs"
 
@@ -133,27 +133,27 @@ msgstr "Veuillez vous connecter pour voir cette page."
 msgid "Log In"
 msgstr "Connexion"
 
-#: templates/composants/header_section.html:12
+#: templates/composants/header_section.html:14
 msgid "Add"
 msgstr "Ajouter"
 
-#: templates/composants/header_section.html:13
+#: templates/composants/header_section.html:15
 msgid "Edit"
 msgstr "Modifier"
 
-#: templates/composants/header_section.html:14
+#: templates/composants/header_section.html:16
 msgid "Save"
 msgstr "Enregistrer"
 
-#: templates/composants/header_section.html:15
+#: templates/composants/header_section.html:17
 msgid "Cancel"
 msgstr "Annuler"
 
-#: templates/composants/header_section.html:16
+#: templates/composants/header_section.html:18
 msgid "Print"
 msgstr "Imprimer"
 
-#: templates/composants/header_section.html:17
+#: templates/composants/header_section.html:19
 msgid "Export"
 msgstr "Exporter"
 

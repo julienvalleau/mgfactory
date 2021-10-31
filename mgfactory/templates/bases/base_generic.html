@@ -7,13 +7,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{% static "css/reset.css" %}">
         <link rel="stylesheet" href="{% static "css/base.css" %}">
-        <link rel="stylesheet" href="{% static "css/content.css" %}">
         <!--<script src="{% static "js/script.js" %}"></script>-->
-        <script src="https://unpkg.com/htmx.org@1.6.0"></script>
         <title>mgFactory</title>
         <link rel="shortcut icon" href="{% static "img/favicon.png" %}"/>
     </head>
     <body>
-        {% block block-app %}{% endblock %}
+         {% block block-app %}{% endblock %}
+        <script type="text/javascript" src="{% static 'js/htmx.min.js' %}"></script>
+        <script>
+        document.body.addEventListener('htmx:configRequest', (event) => {
+            event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+        })
+        </script>
     </body>
 </html>

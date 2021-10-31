@@ -3,20 +3,8 @@
 
 {% block block-content-details %}
 <div class="top-section2">
-    <div class="number-items">
-        {% if page_obj.has_previous %}
-            <a href="?page=1">❮❮</a>
-            &nbsp;&nbsp;
-            <a href="?page={{ page_obj.previous_page_number }}">❮</a>
-            &nbsp;&nbsp;
-        {% endif %}
-        <p>Page {{ page_obj.number }} {% translate "of" %} {{ page_obj.paginator.num_pages }}</p>
-        {% if page_obj.has_next %}
-            &nbsp;&nbsp;
-            <a href="?page={{ page_obj.next_page_number }}">❯</a>
-            &nbsp;&nbsp;
-            <a href="?page={{ page_obj.paginator.num_pages }}">❯❯</a>
-        {% endif %}
+    <div id="suppliers_list">
+        {% include 'rawmaterial/suppliers_list.html' %}
     </div>
     <div class="wrapper-tab">
         <ul>
@@ -27,21 +15,11 @@
         </ul>
     </div>
 </div>
-<div class="wrapper-list">
-    <table class="table-list">
-        <thead><tr><th>{% translate "Name" %}</th><th>{% translate "City" %}</th></tr></thead>
-        <tbody>
-            {% for supplier in page_obj %}
-                <tr>
-                    <td>{{ supplier.name }}</td>
-                    <td>{{ supplier.city }}</td>
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
 
-<div class="wrapper-detail">
+<div id="supplier_details" class="wrapper-detail">
+    {% include 'rawmaterial/supplier_details.html'%}
+</div>
+    <!--
     <div class="form-inline">
         <div class="form-input">
             <label for="supplier-name" class="">Nom :</label>
@@ -143,7 +121,127 @@
             </div>
         </div>
     </div>
-</div>
+    <div class="form-inline">
+        <div class="form-input">             
+            <label for="supplier-level" class="">Niveau d'approbation :</label>
+            <input type="text" name="supplier-level" id="supplier-level"> 
+        </div>
+        <div class="form-radio">
+            <p>Fournisseur critique :</p>
+            <div>
+                <input type="radio" name="supplier-critic" value="1" id="criticYes"/>
+                <label for="supplier-critic">Oui</label>
+                <input type="radio" name="supplier-critic" value="0" id="criticNo"/>
+                <label for="supplier-critic">Non</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-inline">
+        <div class="form-input">             
+            <label for="supplier-level" class="">Niveau d'approbation :</label>
+            <input type="text" name="supplier-level" id="supplier-level"> 
+        </div>
+        <div class="form-radio">
+            <p>Fournisseur critique :</p>
+            <div>
+                <input type="radio" name="supplier-critic" value="1" id="criticYes"/>
+                <label for="supplier-critic">Oui</label>
+                <input type="radio" name="supplier-critic" value="0" id="criticNo"/>
+                <label for="supplier-critic">Non</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-inline">
+        <div class="form-input">             
+            <label for="supplier-level" class="">Niveau d'approbation :</label>
+            <input type="text" name="supplier-level" id="supplier-level"> 
+        </div>
+        <div class="form-radio">
+            <p>Fournisseur critique :</p>
+            <div>
+                <input type="radio" name="supplier-critic" value="1" id="criticYes"/>
+                <label for="supplier-critic">Oui</label>
+                <input type="radio" name="supplier-critic" value="0" id="criticNo"/>
+                <label for="supplier-critic">Non</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-inline">
+        <div class="form-input">             
+            <label for="supplier-level" class="">Niveau d'approbation :</label>
+            <input type="text" name="supplier-level" id="supplier-level"> 
+        </div>
+        <div class="form-radio">
+            <p>Fournisseur critique :</p>
+            <div>
+                <input type="radio" name="supplier-critic" value="1" id="criticYes"/>
+                <label for="supplier-critic">Oui</label>
+                <input type="radio" name="supplier-critic" value="0" id="criticNo"/>
+                <label for="supplier-critic">Non</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-inline">
+        <div class="form-input">             
+            <label for="supplier-level" class="">Niveau d'approbation :</label>
+            <input type="text" name="supplier-level" id="supplier-level"> 
+        </div>
+        <div class="form-radio">
+            <p>Fournisseur critique :</p>
+            <div>
+                <input type="radio" name="supplier-critic" value="1" id="criticYes"/>
+                <label for="supplier-critic">Oui</label>
+                <input type="radio" name="supplier-critic" value="0" id="criticNo"/>
+                <label for="supplier-critic">Non</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-inline">
+        <div class="form-input">             
+            <label for="supplier-level" class="">Niveau d'approbation :</label>
+            <input type="text" name="supplier-level" id="supplier-level"> 
+        </div>
+        <div class="form-radio">
+            <p>Fournisseur critique :</p>
+            <div>
+                <input type="radio" name="supplier-critic" value="1" id="criticYes"/>
+                <label for="supplier-critic">Oui</label>
+                <input type="radio" name="supplier-critic" value="0" id="criticNo"/>
+                <label for="supplier-critic">Non</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-inline">
+        <div class="form-input">             
+            <label for="supplier-level" class="">Niveau d'approbation :</label>
+            <input type="text" name="supplier-level" id="supplier-level"> 
+        </div>
+        <div class="form-radio">
+            <p>Fournisseur critique :</p>
+            <div>
+                <input type="radio" name="supplier-critic" value="1" id="criticYes"/>
+                <label for="supplier-critic">Oui</label>
+                <input type="radio" name="supplier-critic" value="0" id="criticNo"/>
+                <label for="supplier-critic">Non</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-inline">
+        <div class="form-input">             
+            <label for="supplier-level" class="">Niveau d'approbation :</label>
+            <input type="text" name="supplier-level" id="supplier-level"> 
+        </div>
+        <div class="form-radio">
+            <p>Fournisseur critique :</p>
+            <div>
+                <input type="radio" name="supplier-critic" value="1" id="criticYes"/>
+                <label for="supplier-critic">Oui</label>
+                <input type="radio" name="supplier-critic" value="0" id="criticNo"/>
+                <label for="supplier-critic">Non</label>
+            </div>
+        </div>
+    </div>
+    </div>-->
 
 <!--
     <div id="sidebar-filter">

@@ -2,20 +2,23 @@
 {% load i18n %}
 
 {% block block-content %}
-<h1 class="title-section">{% translate "Suppliers" %}</h1>
-<div class="top-section1">
-    <div class="wrapper-search-rapid">
-        <input type="text" name="search-rapid" id="search-rapid" placeholder="Filtrer les fournisseurs">
-        <button class="button-template button-search" title="Filtrer"></button>
-        <button class="button-template button-filter" id="button-filter" title="Filtres avancés"></button>
+<div class="content">
+    <h1 class="title-section">{{ name_view|title }}</h1>
+    <div class="top-section1">
+        <div class="wrapper-search-rapid">
+            <input type="text" name="search-rapid" id="search-rapid" placeholder="{% translate "Filtrer les" %}&nbsp;{{ name_view }}">
+            <button class="button-template button-search" title="{% translate "Filter" %}"></button>
+            <button class="button-template button-filter" id="button-filter" title="{% translate "Advanced filters" %}"></button>
+        </div>
+        <div class="buttons">
+            <button class="button-template button-add button-tools">{% translate "Add" %}</button> 
+            <button class="button-template button-modify button-tools">{% translate "Edit" %}</button>
+            <button class="button-template button-save button-tools">{% translate "Save" %}</button>
+            <button class="button-template button-cancel button-tools">{% translate "Cancel" %}</button>
+            <button class="button-template button-printer button-first-right button-tools">{% translate "Print"%}</button>
+            <button class="button-template button-export button-tools">{% translate "Export" %}</button>            
+        </div>
     </div>
-    <button class="button-template button-add button-tools">{% translate "Add" %}</button> 
-    <button class="button-template button-modify button-tools">{% translate "Edit" %}</button>
-    <button class="button-template button-save button-tools">{% translate "Save" %}</button>
-    <button class="button-template button-cancel button-tools">{% translate "Cancel" %}</button>
-    <button class="button-template button-printer button-first-right button-tools">{% translate "Print"%}</button>
-    <button class="button-template button-export button-tools">{% translate "Export" %}</button>            
+    {% block block-content-details %}{% endblock %}
 </div>
-
-{% block block-content-details %}{% endblock %}
 {% endblock %}
